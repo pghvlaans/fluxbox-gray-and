@@ -32,9 +32,9 @@ if [[ $RG -gt $CST ]] || [[ $RB -gt $CST ]] || [[ $BG -gt $CST ]] || \
 	[[ $NG -gt 255 ]] && NG=255
 	[[ $NB -gt 255 ]] && NB=255
 	# And get the new color in hex.
-	NEWCOLOR=$(printf %X $NR | tr [:lower:] [:upper:])
-	NEWCOLOR=$NEWCOLOR$(printf %X $NG | tr [:lower:] [:upper:])
-	NEWCOLOR=$NEWCOLOR$(printf %X $NB | tr [:lower:] [:upper:])
+	NEWCOLOR=$(printf %02X $NR | tr [:lower:] [:upper:])
+	NEWCOLOR=$NEWCOLOR$(printf %02X $NG | tr [:lower:] [:upper:])
+	NEWCOLOR=$NEWCOLOR$(printf %02X $NB | tr [:lower:] [:upper:])
 	# Make the change.
 	sed -i "s/$1/$NEWCOLOR/g" $2
 fi
@@ -93,9 +93,9 @@ NOBLU=$(echo \($(echo $OUTBLU*1.20 | bc -l) + 0.5\) / 1 | bc)
 [ $NOGRN -gt 255 ] && NOGRN=255
 [ $NOBLU -gt 255 ] && NOBLU=255
 
-NORED=$(printf %X $NORED)
-NOGRN=$(printf %X $NOGRN)
-NOBLU=$(printf %X $NOBLU)
+NORED=$(printf %02X $NORED)
+NOGRN=$(printf %02X $NOGRN)
+NOBLU=$(printf %02X $NOBLU)
 ACCENT=$NORED$NOGRN$NOBLU
 
 # Change the theme file: title, main color, and fade-to color.
