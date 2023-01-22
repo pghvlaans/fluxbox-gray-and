@@ -2,7 +2,7 @@
 Customizable fluxbox themes with retro buttons: to install, simply place the theme directories in `$HOME/.fluxbox/styles`.
 
 **argaur**
-![fluxbox](https://user-images.githubusercontent.com/74497663/213909643-8de3511f-5188-4cc0-b9fd-690adc113f24.png)
+![fluxbox](https://user-images.githubusercontent.com/74497663/213909821-270ddd75-5038-4fe5-a450-c8a7fc70762b.png)
 
 The other themes have different accent and button colors:
 
